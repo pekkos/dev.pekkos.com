@@ -55,19 +55,8 @@
         <p>Coming from the Wordpress world, I'm used to easily work with tags and categories for blog posts. However, tags aren't supported out of the box in Jekyll. Here is a <a href="https://github.com/pattex/jekyll-tagging">nice Ruby plugin</a> that will do the trick. But since my blog is published using GitHub Pages, and GitHub Pages doesn't allow Ruby plugins, I can't use this.</p>
 <p>I found a solution by <a href="https://twitter.com/bkparso">Brandon Parsons</a>, where you create a <a href="/tags/">tags page</a> which gets populated with all used tags and links to posts. There is no way to dynamically create separate pages for each tag, but this should be good enough for me. If you really really want separate pages for each tag, <a href="http://charliepark.org/tags-in-jekyll/">there is a solution here</a>.</p>
 <p>Add tags to YAML front matter, and add a few lines of code to list all tags for the post. Code for the tags page can be found in <a href="https://blog.brandonparsons.me/2015-using-tags-in-a-jekyll-blog-on-github-pages">Brandons blog post</a>.</p>
-<pre><code class="language-rb">---
-tags:
-  jekyll
----
-</code></pre>
-<pre><code class="language-yaml">&lt;ul&gt;
-  {% for tag in page.tags %}
-  &lt;li&gt;
-    &lt;a href=&quot;/tags/#{{ tag }}&quot;&gt;{{ tag }}&lt;/a&gt;
-  &lt;/li&gt;
-  {% endfor %}
-&lt;/ul&gt;
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token operator">--</span><span class="token operator">-</span></span><br><span class="highlight-line">tags<span class="token punctuation">:</span></span><br><span class="highlight-line">  jekyll</span><br><span class="highlight-line"><span class="token operator">--</span><span class="token operator">-</span></span></code></pre>
+<pre class="language-yaml"><code class="language-yaml"><span class="highlight-line">&lt;ul<span class="token punctuation">></span></span><br><span class="highlight-line">  <span class="token punctuation">{</span>% for tag in page.tags %<span class="token punctuation">}</span></span><br><span class="highlight-line">  &lt;li<span class="token punctuation">></span></span><br><span class="highlight-line">    &lt;a href="/tags/<span class="token comment">#{{ tag }}">{{ tag }}&lt;/a></span></span><br><span class="highlight-line">  &lt;/li<span class="token punctuation">></span></span><br><span class="highlight-line">  <span class="token punctuation">{</span>% endfor %<span class="token punctuation">}</span></span><br><span class="highlight-line">&lt;/ul<span class="token punctuation">></span></span></code></pre>
 
     </div>If you liked this post, you can
 <a href="https://twitter.com/intent/tweet?url=http://www.pekkos.com/blog/tags-with-jekyll-and-github-pages/&text=Tags with Jekyll and GitHub Pages&via=pekkos" target="_blank">

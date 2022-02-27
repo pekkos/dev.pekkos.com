@@ -17,7 +17,7 @@ I found a solution by [Brandon Parsons](https://twitter.com/bkparso), where you 
 
 Add tags to YAML front matter, and add a few lines of code to list all tags for the post. Code for the tags page can be found in [Brandons blog post](https://blog.brandonparsons.me/2015-using-tags-in-a-jekyll-blog-on-github-pages).
 
-```rb
+```js
 ---
 tags:
   jekyll

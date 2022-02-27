@@ -74,26 +74,15 @@
 }
 ```
 </pre>
-<p>The above results in the following <code><pre></code> formatted code block, and you can make your code look pretty using a <a href="http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html">Pygments CSS theme</a> compatible with Rouge:</p>
-<pre><code class="language-scss">@mixin text-color($color) {
-  color: $color;
-}
-
-.header {
-  min-height: 4em;
-  background-color: rgb(0,0,0);
-  @include text-color(white);
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px rgba(244,201,73,0.1);
-}
-</code></pre>
+<p>The above results in the following formatted code block, and you can make your code look pretty using a <a href="http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html">Pygments CSS theme</a> compatible with Rouge:</p>
+<pre class="language-scss"><code class="language-scss"><span class="highlight-line"><span class="token keyword">@mixin</span> <span class="token function">text-color</span><span class="token punctuation">(</span><span class="token variable">$color</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token selector">.header </span><span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token property">min-height</span><span class="token punctuation">:</span> 4em<span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token keyword">@include</span> <span class="token function">text-color</span><span class="token punctuation">(</span>white<span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span></span><br><span class="highlight-line">  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 1px 1px 1px <span class="token function">rgba</span><span class="token punctuation">(</span>244<span class="token punctuation">,</span>201<span class="token punctuation">,</span>73<span class="token punctuation">,</span>0.1<span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><br><span class="highlight-line">  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span></code></pre>
 <h2>Liquid tags</h2>
 <p>Finally, if you want to write a fenced code block containing Liquid tags, you need to wrap your code with <code>{% raw %}</code> and <code>{% endraw %}</code> to stop Liquid from interpreting your code as Liquid.</p>
 <pre>
 </pre>
 <p>Which results in the following:</p>
-<pre><code class="language-rb">{% include header %} 
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token punctuation">{</span><span class="token operator">%</span> include header <span class="token operator">%</span><span class="token punctuation">}</span> </span></code></pre>
 
     </div>If you liked this post, you can
 <a href="https://twitter.com/intent/tweet?url=http://www.pekkos.com/blog/syntax-highlighting-for-jekyll/&text=Syntax highlighting for Jekyll&via=pekkos" target="_blank">

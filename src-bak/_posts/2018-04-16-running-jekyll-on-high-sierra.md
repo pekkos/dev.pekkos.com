@@ -15,7 +15,7 @@ So it was time to show my blog a little affection – you know, a little houseke
 
 Which they didn't. Well, for the most part they did, but Jekyll refused to play nice with me. I got this system message telling me Ruby wasn't really playing the game:
 
-```rb
+```js
 /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/
 bin/ruby: bad interpreter: No such file or directory
 ```
@@ -28,7 +28,7 @@ So eventually, I found [this post on Stack Overflow](https://stackoverflow.com/q
 
 Uninstall Jekyll, and install it again. That easy, huh?
 
-```rb
+```js
 gem uninstall Jekyll
 gem install Jekyll
 ```

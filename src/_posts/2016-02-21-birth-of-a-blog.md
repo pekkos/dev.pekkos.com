@@ -4,7 +4,6 @@ title: Birth of a Blog
 category: Blog
 comments: true
 date: 2016-02-21
-abstract: "From the beginning, there was nothing"
 redirect_from:
  - /blog/2016/02/21/birth-of-a-blog.html
 permalink: "/blog/{{ title | slug }}/"

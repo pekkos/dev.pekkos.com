@@ -66,6 +66,6 @@ Finally, if you want to write a fenced code block containing Liquid tags, you ne
 
 Which results in the following:
 
-```rb {% raw %}
+```js {% raw %}
 {% include header %} {% endraw %}
 ```

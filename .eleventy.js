@@ -1,4 +1,16 @@
+/* Syntax highlighting */
+
+
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+// module.exports = function (eleventyConfig) {
+//   eleventyConfig.addPlugin(syntaxHighlight, {
+//     templateFormats: ["md"]
+//   });
+// };
+
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Aliases are in relation to the _includes folder
   eleventyConfig.addLayoutAlias('post', 'layouts/post.html');
@@ -17,6 +29,7 @@ module.exports = function (eleventyConfig) {
 
   // Defines shortcode for generating post excerpts
   eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
+
 
 
 
@@ -83,3 +96,5 @@ function findExcerptEnd(content, skipLength = 0) {
 
   return paragraphEnd;
 }
+
+

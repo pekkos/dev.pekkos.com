@@ -53,12 +53,7 @@
 
     <div class="blog-post spacing e-content">
         <p>As I installed Google Analytics, I wanted to keep it from tracking pages on my local development web server. I found <a href="http://david.elbe.me/jekyll/2015/06/08/jekyll-different-settings-production-github-and-development.html">this neat solution</a> by David Elbe, which lets med keep development stuff apart from production stuff. On GitHub Pages,  <code>jekyll.environment</code> is always set to <code>production</code>.</p>
-<pre><code class="language-rb">{% if jekyll.environment == 'production' %}
-  /* Production stuff */
-{% else %}
-  /* Development stuff */
-{% endif %} 
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">if</span> jekyll<span class="token punctuation">.</span>environment <span class="token operator">==</span> <span class="token string">'production'</span> <span class="token operator">%</span><span class="token punctuation">}</span></span><br><span class="highlight-line">  <span class="token comment">/* Production stuff */</span></span><br><span class="highlight-line"><span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">else</span> <span class="token operator">%</span><span class="token punctuation">}</span></span><br><span class="highlight-line">  <span class="token comment">/* Development stuff */</span></span><br><span class="highlight-line"><span class="token punctuation">{</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">}</span> </span></code></pre>
 
     </div>If you liked this post, you can
 <a href="https://twitter.com/intent/tweet?url=http://www.pekkos.com/blog/development-and-production-settings-for-jekyll/&text=Development and production settings for Jekyll&via=pekkos" target="_blank">

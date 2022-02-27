@@ -37,10 +37,11 @@ To create a fenced code block, [use triple backticks](https://help.github.com/ar
 ```
 </pre>
 
-The above results in the following <code><pre></code> formatted code block, and you can make your code look pretty using a [Pygments CSS theme](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) compatible with Rouge:
+The above results in the following formatted code block, and you can make your code look pretty using a [Pygments CSS theme](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) compatible with Rouge:
 
 ```scss
 @mixin text-color($color) {
+
   color: $color;
 }
 
@@ -53,6 +54,12 @@ The above results in the following <code><pre></code> formatted code block, and 
 }
 ```
 
+``` js
+function myFunction() {
+  return true;
+}
+```
+
 ## Liquid tags
 
 Finally, if you want to write a fenced code block containing Liquid tags, you need to wrap your code with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> to stop Liquid from interpreting your code as Liquid.
@@ -62,6 +69,6 @@ Finally, if you want to write a fenced code block containing Liquid tags, you ne
 
 Which results in the following:
 
-```rb {% raw %}
+```js {% raw %}
 {% include header %} {% endraw %}
 ```
